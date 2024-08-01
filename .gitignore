@@ -1,20 +1,31 @@
+# PHPUnit caches
 /.phpunit.cache
+.phpunit.result.cache
+
+# Node modules and public build artifacts
 /node_modules
 /public/build
 /public/hot
 /public/storage
+
+# Laravel specific files
 /storage/*.key
 /vendor
+
+# Environment and backup files
 .env
 .env.backup
 .env.production
+
+# Miscellaneous configuration and log files
 .phpactor.json
-.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+
+# IDE and editor directories
 /.fleet
 /.idea
 /.vscode
