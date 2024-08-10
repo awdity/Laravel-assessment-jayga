@@ -1,9 +1,15 @@
 <?php
-use App\Http\Controllers;
+use App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ProductSearchController;
 
-Route::apiResource('categories', Api\CategoryController::class);
-Route::apiResource('products', Api\ProductController::class);
-Route::apiResource('attributes', Api\AttributeController::class);
+
+Route::apiResource('categories', CategoryController::class);
+Route::apiResource('products', ProductController::class);
+Route::apiResource('attributes', AttributeController::class);
+Route::get('/products/search',[ProductSearchController::class, 'search']);
+Route::get('/test', function () {
+    return response()->json(['message' => 'Hello, world!']);
+});
 
